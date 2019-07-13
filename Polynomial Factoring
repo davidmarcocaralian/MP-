@@ -1,0 +1,41 @@
+# include <iostream>
+# include <iomanip>
+# include <conio.h>
+# include <cmath>
+
+using namespace std;
+
+int main()
+{
+	int a, b, c;
+	int u, v;
+
+	cout << "\nForm of Second-Degree Polynomial: " << "ax^2 + bx + c" << endl;
+
+	cout << "\nEnter Coefficients: " << endl;
+	cout << "ax^2: ";
+	cin >> a;
+	cout << "bx: ";
+	cin >> b;
+	cout << "c: ";
+	cin >> c;
+
+	u = ((-b) + sqrt(((b * b) - (4 * (a * c))))) / 2;
+	v = ((-b) - sqrt(((b * b) - (4 * (a * c))))) / 2;
+
+    cout << "\nFactors of Polynomial: ";
+
+	if (u <= 0)
+		cout << "(x+" << abs(u) << ")";
+	else
+		cout << "(x" << u * (-1) << ")";
+	
+	if (v <= 0)
+		cout << "(x+" << abs(v) << ")";
+	else
+		cout << "(x" << v * (-1) << ")";
+	
+
+	_getch();
+	return 0;
+}
